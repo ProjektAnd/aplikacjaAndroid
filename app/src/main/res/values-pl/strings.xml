@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">Komunikator Internetowy na Urzadzenia Mobilne</string>
+
+    <string name="hello_user">Projektowanie aplikacji na platformie Android</string>
+    <string name="PREF">MY_SHARED</string>
+    <string name="KEY">KEY</string>
+    <string name="COMMENT">EXTRA_COMMENT</string>
+
+
+    <string name="user_credentials">Nieznany użytkownik</string>
+    <string name="user_status">Nieznany status</string>
+    <string name="chat_input_field">Wprowadz tekst, aby porozmawiać...</string>
+    <string name="chat_sender">Wiadomość od nadawcy ...</string>
+    <string name="chat_receiver">Wiadomość od odbiorcy...</string>
+
+    <string name="post_update_save_button">ZAPISZ ZMIANY </string>
+    <string name="post_update_input_text">Wpisz tutaj tekst, aby dodać opis... </string>
+    <string name="post_posts">Posty</string>
+    <string name="post_create">Utwórz nowy post</string>
+    <string name="post_empty">Nie dodałeś żadnego postu</string>
+
+    <string name="profile_edit_save_button">ZAKTUALIZUJ PROFIL</string>
+    <string name="profile_edit_button">Edytuj profil</string>
+    <string name="profile_add_story_button">dodaj historyjke</string>
+    <string name="profile_friends_header">Znajomi</string>
+    <string name="profile_friends_show_all">Pokaż wszystkich</string>
+    <string name="profile_friends_amount">Brak znajomych</string>
+
+    <string name="profile_user_name">Nazwa użytkownika</string>
+    <string name="profile_user_location">Lokalizacja</string>
+    <string name="profile_user_phone">Numer telefonu</string>
+    <string name="profile_user_biography">Bibliografia</string>
+    <string name="profile_user_education">Edukacja</string>
+    <string name="profile_user_email">Adres Email</string>
+    <string name="profile_user_password">Hasło</string>
+    <string name="profile_user_description">Opis</string>
+
+    <string name="reacted_toolbar">Reakcje</string>
+
+    <string name="friend_list_description">Znajomi</string>
+
+    <string name="login_page_title">Komunikator Internetowy na Urzadzenia Mobilne</string>
+    <string name="login_email">E-mail</string>
+    <string name="login_password">Hasło</string>
+    <string name="login_login">Zaloguj</string>
+    <string name="login_register">Zarejestruj</string>
+    <string name="login_register_header">Nie masz konta?</string>
+
+    <string name="main_menu_search_friends_button">Szukaj użytkowników</string>
+
+
+    <string name="registration_profile_image_header">Wgraj zdjecie profilowe</string>
+    <string name="registration_login_header">Masz już założone konto ?</string>
+    <string name="registration_register">Zarejestruj</string>
+
+    <string name="update_update">Zaktualizuj</string>
+    <string name="post_favourites">Ulubione posty</string>
+    <string name="time_example">10 godzin temu</string>
+    <string name="post_text">Witam was wszystkich bardzo serdecznie. Pozdrawiam serdecznie i pisze te bazgroly, bo nie mam lepszego pomyslu co tu napisac. </string>
+    <string name="post_toolbar">DODAJ POST</string>
+    <string name="post_upload_file">Wgraj plik</string>
+
+    <string name="comment_text">Witaj nieznajomy i podziwiaj laki, lasy i dzikie zwierzeta.</string>
+    <string name="comment_toolbar">Odpowiedzi</string>
+    <string name="comment_reply">Odpowiedz</string>
+    <string name="comment_like">Polub</string>
+
+    <string name="search_users_header">Użytkownicy</string>
+
+    <string name="credits_message">Projektowanie aplikacji na platformie Android - Project (PL)</string>
+
+    <string name="story_upload_file">Wgraj plik</string>
+    <string name="story_button_share">Podziel sie historyjka</string>
+    <string name="story_add_story">Dodaj historyjke</string>
+
+
+    <string name="friend_empty_list">Nie masz żadnych znajomych</string>
+    <string name="notifications_empty_list">Brak nowych powiadomień</string>
+    <string name="friend_request_list_empty">Brak nowych zaproszeń</string>
+    <string name="friend_request_accept">Potweirdź</string>
+    <string name="friend_request_deny">Usuń</string>
+
+    <string name="number_example">0</string>
+
+    <string name="menu_return_home"> Odwiedź swój profil</string>
+
+    <string name="menu_chat_with_friends">Konwersacje</string>
+    <string name="menu_post_feed">Ulubione posty</string>
+    <string name="menu_settings"> ustawienia </string>
+    <string name="menu_language"> jezyk </string>
+    <string name="menu_credits" > informacje o projekcie</string>
+    <string name="menu_logout"> wyloguj </string>
+
+    <string name="post_menu_reactions">Reakcje</string>
+    <string name="post_menu_edit">Edytuj</string>
+
+    <string name="code_friend_proposal_accepted">Jesteście teraz znajomymi</string>
+    <string name="code_chat_empty_message">Prosze wprowadź wiadomość</string>
+    <string name="code_profile_update_success">Profil pomyślnie zaktualizowany</string>
+    <string name="code_loading">Ladowanie...</string>
+    <string name="code_account_is_created">Tworzenie konta...</string>
+    <string name="code_confirm_exit">Naciśnij przycisk ponownie, żeby potwierdzić wyjście</string>
+    <string name="code_empty_field">Wypełnij wszytskie pola</string>
+    <string name="code_empty_profile_picture">Wgraj zdjecie profilowe</string>
+    <string name="code_empty_post_comment">Prosze dodaj opis</string>
+    <string name="code_empty_story_comment">Prosze dodaj opis</string>
+
+    <string name="title_activity_android_localize">AndroidLocalize</string>
+    <string name="language_title">Wybieranie jezyka</string>
+    <string name="language_selection">Zmień jezyk aplikacji</string>
+    <string name="language_select_specified">Wybierz jezyk</string>
+    <string-array name="languages">
+        <item>Wybierz jezyk</item>
+        <item>Polski</item>
+        <item>Angielski</item>
+    </string-array>
+
+</resources>

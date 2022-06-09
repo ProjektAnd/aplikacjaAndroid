@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:padding="@dimen/padding_et_size">
+
+    <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+        android:id="@+id/iv_rounded_user_image"
+        android:layout_width="@dimen/icon_user_large_size"
+        android:layout_height="@dimen/icon_user_large_size"
+        android:src="@drawable/test_photo"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_credentials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard_size"
+        android:text="@string/profile_user_name"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/text_large_size"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toEndOf="@id/iv_rounded_user_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_profile_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard_size"
+        android:layout_marginTop="@dimen/margin_tiny_size"
+        android:layout_marginEnd="@dimen/margin_standard_size"
+        android:layout_marginBottom="@dimen/margin_standard_size"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_rounded_user_image">
+
+        <Button
+            android:id="@+id/bt_accept_friend_request"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_button_small_size"
+            android:layout_weight="1"
+            android:background="@drawable/shape_background"
+            android:text="@string/friend_request_accept"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondary" />
+
+        <Button
+            android:id="@+id/bt_deny_friend_request"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_button_small_size"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:layout_weight="1"
+            android:background="@drawable/shape_comment"
+            android:text="@string/friend_request_deny"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

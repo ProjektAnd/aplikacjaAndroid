@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.LanguageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/rv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_standard_size"
+        android:background="@color/colorPrimary">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bt_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/captura_regular"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:id="@+id/greet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/margin_toolbar_size"
+                android:text="@string/language_title"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/toolbar_button_text_size"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="25sp"
+        android:text="@string/language_selection"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorTextFieldHeaderOnBackground"
+        android:textSize="@dimen/text_field_standard_size"
+        android:textStyle="bold" />
+
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_standard_size_2t5times"
+        android:background="@color/colorSecondaryDark"
+        android:entries="@array/languages"
+        android:gravity="center"
+        android:padding="@dimen/padding_et_size"
+        android:popupBackground="@color/colorPrimary"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/text_huge_size" />
+
+</LinearLayout>

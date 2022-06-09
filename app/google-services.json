@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "327821875219",
+    "firebase_url": "https://androidprojekt-komunikator-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "androidprojekt-komunikator",
+    "storage_bucket": "androidprojekt-komunikator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327821875219:android:d7a2786f3d45a359fe87e6",
+        "android_client_info": {
+          "package_name": "net.mankindenemy.diploma.projektProgramowanieAndroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327821875219-a09321i4j9l7ls9d42l0l2uov8qmdlf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjvnii7uhw36zliMujRGgcJiSScjkWDJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327821875219-a09321i4j9l7ls9d42l0l2uov8qmdlf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

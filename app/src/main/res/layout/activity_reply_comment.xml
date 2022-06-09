@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.ReplyCommentActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/rv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_standard_size"
+        android:background="@color/colorPrimary"
+
+        app:contentInsetStart="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/comment_toolbar"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/toolbar_button_text_size"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/cosmetic_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorSecondaryDark"
+
+        app:layout_constraintTop_toBottomOf="@id/rv_toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small_size"
+        android:layout_marginBottom="@dimen/margin_small_size"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cosmetic_line">
+
+        <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="@dimen/icon_standard_size"
+            android:layout_height="@dimen/icon_standard_size"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:layout_marginTop="@dimen/margin_small_size_1t5times"
+            android:src="@drawable/test_photo"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_comment_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_comment_size"
+            android:layout_marginTop="@dimen/margin_small_size_1t5times"
+            android:layout_marginEnd="@dimen/margin_standard_size"
+
+            app:cardBackgroundColor="@color/colorSecondary"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_comment"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_small_size"
+                android:layout_marginEnd="@dimen/margin_standard_size"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_post_owner_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small_size"
+                    android:layout_marginTop="@dimen/margin_tiny_size"
+                    android:maxLines="1"
+                    android:text="@string/profile_user_name"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text_chat_user_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small_size"
+                    android:text="@string/comment_text"
+                    android:textColor="@color/colorTextChat"
+                    android:textSize="@dimen/text_chat_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_comment_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_standard_size_2times"
+            android:layout_marginTop="@dimen/margin_tiny_size"
+            android:text="@string/comment_reply"
+            android:textColor="@color/colorSecondaryDark"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toEndOf="@id/iv_comment"
+            app:layout_constraintTop_toBottomOf="@id/cv_comment_window" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:layout_marginTop="@dimen/margin_tiny_size"
+            android:text="@string/comment_like"
+            android:textColor="@color/colorSecondaryDark"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toEndOf="@id/tv_comment_reply"
+            app:layout_constraintTop_toBottomOf="@id/cv_comment_window" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReplyComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard_size_2t5times"
+        android:layout_marginTop="@dimen/margin_small_size"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_comment"
+
+        tools:listitem="@layout/item_comment" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_extended_size"
+        android:background="@color/colorSecondary"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <include layout="@layout/fragment_cosmetic_line" />
+
+        <ImageView
+            android:id="@+id/iv_image_add"
+            android:layout_width="@dimen/icon_standard_size"
+            android:layout_height="@dimen/icon_standard_size"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:backgroundTint="@color/colorSecondaryDark"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_import_file"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_field_standard_size"
+            android:layout_marginStart="@dimen/margin_chat_toolbar_size"
+            android:layout_marginEnd="@dimen/margin_standard_size"
+            android:background="@drawable/shape_comment"
+            android:hint="@string/chat_input_field"
+            android:inputType="text"
+            android:maxLines="5"
+            android:paddingStart="@dimen/margin_standard_size"
+            android:textColor="@color/colorTextChat"
+            android:textColorHint="@color/colorTextChatDark"
+            android:textSize="@dimen/text_chat_size"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/bt_enter_comment"
+            android:layout_width="@dimen/icon_standard_size"
+            android:layout_height="@dimen/icon_standard_size"
+            android:layout_marginEnd="@dimen/margin_standard_size"
+            android:background="@drawable/ic_send_message"
+            android:backgroundTint="@color/colorPrimary"
+
+            app:layout_constraintBottom_toBottomOf="@id/et_comment"
+            app:layout_constraintEnd_toEndOf="@id/et_comment"
+            app:layout_constraintTop_toTopOf="@id/et_comment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

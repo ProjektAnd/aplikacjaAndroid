@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="false"
+    android:orientation="vertical"
+
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.fragment.MenuFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_standard_size_1t5times">
+
+            <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+                android:id="@+id/iv_rounded_user_image"
+                android:layout_width="@dimen/icon_user_large_size"
+                android:layout_height="@dimen/icon_user_large_size"
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:src="@drawable/test_photo"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_user_credentials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_standard_size"
+                android:layout_marginTop="@dimen/margin_standard_size_2times"
+                android:text="@string/profile_user_name"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/text_very_large_size"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@id/iv_rounded_user_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_profile_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:text="@string/menu_return_home"
+                android:textColor="@color/colorSecondaryDark"
+                android:textSize="@dimen/text_large_size"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@id/iv_rounded_user_image"
+                app:layout_constraintTop_toBottomOf="@id/tv_user_credentials" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/fragment_cosmetic_line" />
+
+      <!--  <Button
+            android:id="@+id/bt_chat_feed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button_large_size"
+            android:layout_marginHorizontal="@dimen/margin_standard_size_1t5times"
+            android:layout_marginTop="@dimen/margin_standard_size_2t5times"
+            android:layout_marginBottom="@dimen/margin_standard_size_1t5times"
+            android:background="@color/colorSecondary"
+            android:onClick="onClick"
+            android:text="@string/menu_chat_with_friends"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_post_feed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button_large_size"
+            android:layout_margin="@dimen/margin_standard_size_1t5times"
+            android:background="@color/colorSecondary"
+            android:onClick="onClick"
+            android:text="@string/menu_post_feed"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_settings"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button_large_size"
+            android:layout_margin="@dimen/margin_standard_size_1t5times"
+            android:background="@color/colorSecondary"
+            android:onClick="onClick"
+            android:text="@string/menu_settings"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold" /> -->
+
+        <Button
+            android:id="@+id/bt_language"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button_large_size"
+            android:layout_margin="@dimen/margin_standard_size_1t5times"
+            android:background="@color/colorSecondary"
+            android:onClick="onClick"
+            android:text="@string/menu_language"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/bt_about_project"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button_large_size"
+            android:layout_margin="@dimen/margin_standard_size_1t5times"
+            android:background="@color/colorSecondary"
+            android:onClick="onClick"
+            android:text="@string/menu_credits"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_log_out"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button_large_size"
+            android:layout_margin="@dimen/margin_standard_size_1t5times"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick"
+            android:text="@string/menu_logout"
+            android:textColor="@color/colorSecondaryDark"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

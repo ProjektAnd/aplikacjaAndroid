@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B6042E</color>
+    <color name="colorPrimaryDark">#320202</color>
+    <color name="colorSecondary">#A8A7A7</color>
+    <color name="colorSecondaryDark">#88786A</color>
+    <color name="colorAccent">#FFEB3B</color>
+    <color name="colorBackground">#252524</color>
+    <color name="colorBackgroundLighter">#4A4A4A</color>
+    <color name="colorTextChat">#2F2FAF</color>
+    <color name="colorTextChatDark">#0C0C4C</color>
+    <color name="colorTextFieldHeaderOnBackground">@color/colorSecondary</color>
+</resources>

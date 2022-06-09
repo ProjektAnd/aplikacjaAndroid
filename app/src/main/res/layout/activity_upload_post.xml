@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.UploadPostActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/rv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_standard_size"
+        android:background="@color/colorPrimary"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bt_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/captura_regular"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:id="@+id/tv_post_text_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/margin_toolbar_size"
+                android:text="@string/post_toolbar"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/toolbar_button_text_size"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/cosmetic_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorSecondaryDark" />
+
+    <EditText
+        android:id="@+id/et_post_text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard_size_2times"
+        android:background="@color/colorSecondary"
+        android:gravity="top"
+        android:inputType="textMultiLine|textAutoComplete"
+        android:minHeight="@dimen/height_et_extended_size"
+        android:padding="@dimen/padding_et_size"
+        android:text="@string/post_update_input_text"
+        android:textColor="@color/colorTextChat"
+        android:textColorHint="@color/colorTextChatDark"
+        android:textSize="@dimen/text_chat_size"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_upload_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/margin_standard_size"
+        android:layout_marginTop="@dimen/text_huge_size"
+        android:backgroundTint="@color/colorSecondaryDark"
+        android:drawableStart="@drawable/ic_upload_file"
+        android:drawablePadding="@dimen/padding_et_size"
+        android:fontFamily="@font/captura_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/post_upload_file"
+        android:textColor="@color/colorSecondaryDark"
+        android:textSize="@dimen/text_very_large_size"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_create_post" />
+
+    <ImageView
+        android:id="@+id/iv_post_image_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/post_image_content_upload_file"
+        android:backgroundTint="@color/colorSecondaryDark"
+        android:scaleType="center"
+        android:visibility="gone"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_upload_file" />
+
+</LinearLayout>

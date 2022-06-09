@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_et_size"
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.UpdateProfileActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard_size"
+        android:text="@string/profile_user_name"
+        android:textColor="@color/colorTextFieldHeaderOnBackground"
+        android:textSize="@dimen/text_field_standard_size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_standard_size"
+        android:background="@color/colorSecondaryDark"
+        android:gravity="top"
+        android:inputType="textPassword"
+        android:padding="@dimen/padding_et_size"
+        android:text=""
+        android:textColor="@color/colorTextChat"
+        android:textColorHint="@color/colorTextChatDark"
+        android:textSize="@dimen/text_chat_size" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_user_password"
+        android:textColor="@color/colorTextFieldHeaderOnBackground"
+        android:textSize="@dimen/text_field_standard_size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_profile_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSecondaryDark"
+        android:gravity="top"
+        android:inputType="textPassword"
+        android:padding="@dimen/padding_et_size"
+        android:layout_marginVertical="@dimen/margin_standard_size"
+        android:text=""
+        android:textColor="@color/colorTextChat"
+        android:textColorHint="@color/colorTextChatDark"
+        android:textSize="@dimen/text_chat_size" />
+
+
+    <Button
+        android:id="@+id/bt_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button_huge_size"
+        android:layout_marginTop="@dimen/margin_standard_size_2times"
+        android:background="@drawable/shape_background"
+        android:text="@string/update_update"
+        android:textAllCaps="false"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/text_field_extended_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

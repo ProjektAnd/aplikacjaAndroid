@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_standard_size"
+
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/captura_black"
+        android:includeFontPadding="false"
+        android:text="@string/login_page_title"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/text_login_app_title_size" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard_size_5times"
+        android:textColor="@color/colorTextChat"
+        android:textColorHint="@color/colorTextChatDark"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_field_extended_size"
+            android:background="@color/colorSecondaryDark"
+            android:fontFamily="@font/captura_light"
+            android:hint="@string/login_email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/margin_standard_size"
+            android:textSize="@dimen/text_chat_size" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextChat"
+        android:textColorHint="@color/colorTextChatDark"
+
+        app:hintEnabled="true"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_field_extended_size"
+            android:background="@color/colorSecondaryDark"
+            android:fontFamily="@font/captura_light"
+            android:hint="@string/login_password"
+            android:inputType="textPassword"
+            android:padding="@dimen/margin_standard_size"
+            android:textSize="@dimen/text_chat_size" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_field_extended_size"
+        android:layout_marginTop="@dimen/margin_standard_size_5times"
+        android:background="@drawable/shape_background"
+        android:text="@string/login_login"
+        android:textAllCaps="false"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/text_field_extended_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard_size_5times"
+        android:layout_marginBottom="@dimen/margin_standard_size"
+        android:fontFamily="@font/captura_light"
+        android:text="@string/login_register_header"
+        android:textColor="@color/colorTextFieldHeaderOnBackground"
+        android:textSize="@dimen/text_field_standard_size" />
+
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_field_extended_size"
+        android:background="@drawable/shape_background"
+        android:text="@string/login_register"
+        android:textAllCaps="false"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/text_field_extended_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_profile_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_standard_size"
+        android:background="@color/colorSecondary"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_profile"
+            android:layout_width="@dimen/icon_small_size"
+            android:layout_height="@dimen/icon_small_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:background="@drawable/ic_user_account"
+            android:backgroundTint="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/bt_search_users"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/toolbar_field_small_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:layout_marginEnd="@dimen/margin_standard_size"
+            android:layout_weight="1"
+            android:background="@drawable/search_user_background"
+            android:onClick="onClick"
+            android:text="@string/main_menu_search_friends_button"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_chat_size" />
+
+    </LinearLayout>
+
+    <include layout="@layout/fragment_cosmetic_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_small_size"
+        android:background="@color/colorSecondary"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/bt_home"
+                style="?android:attr/selectableItemBackground"
+                android:layout_width="@dimen/icon_small_size"
+                android:layout_height="@dimen/icon_small_size"
+                android:background="@drawable/ic_menu_home"
+                android:backgroundTint="@color/colorSecondaryDark"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="onClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/bt_chat"
+                style="?android:attr/selectableItemBackground"
+                android:layout_width="@dimen/icon_small_size"
+                android:layout_height="@dimen/icon_small_size"
+                android:background="@drawable/ic_menu_messages"
+                android:backgroundTint="@color/colorSecondaryDark"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="onClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/bt_friends"
+                style="?android:attr/selectableItemBackground"
+                android:layout_width="@dimen/icon_small_size"
+                android:layout_height="@dimen/icon_small_size"
+                android:background="@drawable/ic_menu_friends"
+                android:backgroundTint="@color/colorSecondaryDark"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="onClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_standard_size"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/bt_settings_menu"
+                style="?android:attr/selectableItemBackground"
+                android:layout_width="@dimen/icon_small_size"
+                android:layout_height="@dimen/icon_small_size"
+                android:background="@drawable/ic_menu_menu"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="onClick" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/fragment_cosmetic_line" />
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

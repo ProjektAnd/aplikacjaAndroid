@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="false"
+    android:orientation="vertical"
+
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding_et_size"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+                android:id="@+id/iv_rounded_post_owner_picture"
+                android:layout_width="@dimen/icon_user_huge_size"
+                android:layout_height="@dimen/icon_user_huge_size"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_profile_picture"
+                android:tint="@color/colorSecondaryDark" />
+
+            <TextView
+                android:id="@+id/tv_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:text="@string/registration_profile_image_header"
+                android:textColor="@color/colorSecondaryDark"
+                android:fontFamily="@font/captura_light"
+                android:textSize="@dimen/toolbar_text_small_size" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard_size_2times"
+            android:background="@color/colorSecondaryDark"
+            android:textColor="@color/colorTextChat"
+            android:textColorHint="@color/colorTextChatDark"
+
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/captura_light"
+                android:hint="@string/profile_user_name"
+                android:inputType="textPersonName"
+
+                android:layout_height="@dimen/height_et_size"
+                android:background="@color/colorSecondary"
+                android:padding="@dimen/padding_et_size"
+                android:textSize="@dimen/text_standard_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondaryDark"
+            android:textColor="@color/colorTextChat"
+            android:textColorHint="@color/colorTextChatDark"
+
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_education"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/captura_light"
+                android:hint="@string/profile_user_education"
+                android:inputType="text"
+                android:layout_height="@dimen/height_et_size"
+                android:background="@color/colorSecondary"
+                android:padding="@dimen/padding_et_size"
+                android:textSize="@dimen/text_standard_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondaryDark"
+            android:textColor="@color/colorTextChat"
+            android:textColorHint="@color/colorTextChatDark"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_location"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/captura_light"
+                android:hint="@string/profile_user_location"
+                android:inputType="textAutoComplete"
+                android:layout_height="@dimen/height_et_size"
+                android:background="@color/colorSecondary"
+                android:padding="@dimen/padding_et_size"
+                android:textSize="@dimen/text_standard_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondaryDark"
+            android:textColor="@color/colorTextChat"
+            android:textColorHint="@color/colorTextChatDark"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_bio"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/captura_light"
+                android:hint="@string/profile_user_biography"
+                android:inputType="textAutoComplete"
+                android:layout_height="@dimen/height_et_size"
+                android:background="@color/colorSecondary"
+                android:padding="@dimen/padding_et_size"
+                android:textSize="@dimen/text_standard_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondaryDark"
+            android:textColor="@color/colorTextChat"
+            android:textColorHint="@color/colorTextChatDark"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone_number"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/captura_light"
+                android:hint="@string/profile_user_phone"
+                android:inputType="number"
+                android:layout_height="@dimen/height_et_size"
+                android:background="@color/colorSecondary"
+                android:padding="@dimen/padding_et_size"
+                android:textSize="@dimen/text_standard_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondaryDark"
+            android:textColor="@color/colorTextChat"
+            android:textColorHint="@color/colorTextChatDark"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email_address"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/captura_light"
+                android:hint="@string/profile_user_email"
+                android:inputType="textEmailAddress"
+                android:layout_height="@dimen/height_et_size"
+                android:background="@color/colorSecondary"
+                android:padding="@dimen/padding_et_size"
+                android:textSize="@dimen/text_standard_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="true"
+            android:background="@color/colorSecondaryDark"
+            android:textColor="@color/colorTextChat"
+            android:textColorHint="@color/colorTextChatDark"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/captura_light"
+                android:hint="@string/profile_user_password"
+                android:inputType="textPassword"
+                android:layout_height="@dimen/height_et_size"
+                android:background="@color/colorSecondary"
+                android:padding="@dimen/padding_et_size"
+                android:textSize="@dimen/text_standard_size" >
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_register_complete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_button_huge_size"
+            android:layout_marginTop="@dimen/margin_standard_size_2times"
+            android:background="@drawable/shape_background"
+            android:text="@string/registration_register"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondary"
+            android:textSize="@dimen/text_field_extended_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_standard_size_2times"
+            android:text="@string/registration_login_header"
+            android:fontFamily="@font/captura_light"
+            android:textColor="@color/colorTextFieldHeaderOnBackground"
+            android:textSize="@dimen/text_field_standard_size"/>
+
+        <Button
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_field_extended_size"
+            android:background="@drawable/shape_background"
+            android:text="@string/login_login"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/margin_standard_size"
+            android:textColor="@color/colorSecondary"
+            android:textSize="@dimen/text_field_extended_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

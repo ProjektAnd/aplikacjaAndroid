@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:padding="@dimen/padding_et_size">
+
+
+    <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+        android:id="@+id/iv_rounded_user_image"
+        android:layout_width="@dimen/icon_user_standard_size"
+        android:layout_height="@dimen/icon_user_standard_size"
+        android:src="@drawable/test_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_credentials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard_size"
+        android:text="@string/profile_user_name"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/text_large_size"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_rounded_user_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textColor="@color/colorSecondaryDark"-->
+    <!--        android:text="@string/user_status"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/iv_rounded_user_image"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/tv_user_credentials"-->
+    <!--        android:layout_marginStart="@dimen/margin_standard_size"-->
+    <!--        android:layout_marginTop="@dimen/margin_tiny_size"-->
+    <!--        android:textSize="@dimen/text_standard_size"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:id="@+id/tv_user_status"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

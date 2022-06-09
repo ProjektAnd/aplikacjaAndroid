@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/rv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_very_small_size"
+        android:background="@color/colorPrimary"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/captura_regular"
+            android:text="@string/user_credentials"
+            android:textColor="@color/colorSecondary"
+            android:textStyle="bold"
+            android:textSize="@dimen/toolbar_text_small_size" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/cosmetic_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorSecondaryDark"
+
+        app:layout_constraintTop_toBottomOf="@+id/rv_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cosmetic_line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:paddingBottom="@dimen/padding_huge_size">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_profile_photo_cover_size"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@color/colorBackgroundLighter"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+                android:id="@+id/iv_rounded_profile_image"
+                android:layout_width="@dimen/icon_user_huge_size"
+                android:layout_height="@dimen/icon_user_huge_size"
+                android:layout_marginTop="@dimen/height_profile_photo_cover_size"
+                android:src="@drawable/test_photo"
+
+                app:civ_border_color="@android:color/darker_gray"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_profile" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:fontFamily="@font/captura_black"
+                android:text="@string/user_credentials"
+                android:textAlignment="center"
+                android:textColor="@color/colorSecondaryDark"
+                android:textSize="@dimen/text_field_extended_size"
+
+                app:layout_constraintTop_toBottomOf="@id/iv_rounded_profile_image"
+
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/tv_profile_biography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:text="@string/profile_user_biography"
+                android:textAlignment="center"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/text_small_size"
+
+                app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
+
+            <TextView
+                android:id="@+id/tv_education"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:layout_marginTop="@dimen/margin_standard_size"
+                android:drawableStart="@drawable/ic_education"
+                android:drawablePadding="@dimen/padding_et_size"
+                android:drawableTint="@color/colorSecondary"
+                android:fontFamily="@font/captura_regular"
+                android:gravity="center"
+                android:text="@string/profile_user_education"
+                android:textColor="@android:color/tertiary_text_dark"
+                android:textSize="@dimen/text_standard_size"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_profile_biography" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="@dimen/padding_et_size"
+                android:drawableTint="@color/colorSecondary"
+                android:fontFamily="@font/captura_regular"
+                android:gravity="center"
+                android:text="@string/profile_user_location"
+                android:textColor="@android:color/tertiary_text_dark"
+                android:textSize="@dimen/text_standard_size"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="@dimen/padding_et_size"
+                android:drawableTint="@color/colorSecondary"
+                android:fontFamily="@font/captura_regular"
+                android:gravity="center"
+                android:text="@string/profile_user_email"
+                android:textColor="@android:color/tertiary_text_dark"
+                android:textSize="@dimen/text_standard_size"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_education" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:layout_marginTop="@dimen/margin_small_size"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="@dimen/padding_et_size"
+                android:drawableTint="@android:color/darker_gray"
+                android:fontFamily="@font/captura_regular"
+                android:gravity="center"
+                android:text="@string/profile_user_phone"
+                android:textColor="@android:color/tertiary_text_dark"
+                android:textSize="@dimen/text_standard_size"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_location" />
+
+            <LinearLayout
+                android:id="@+id/ll_profile_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_standard_size"
+                android:orientation="horizontal"
+
+                app:layout_constraintTop_toBottomOf="@id/tv_phone">
+
+                <Button
+                    android:id="@+id/editProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_button_standard_size"
+                    android:layout_margin="@dimen/margin_standard_size"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_background"
+                    android:fontFamily="@font/captura_regular"
+                    android:text="@string/profile_edit_button"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="@dimen/text_small_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard_size"
+                android:fontFamily="@font/captura_regular"
+                android:text="@string/profile_friends_header"
+                android:textColor="@color/colorSecondaryDark"
+                android:textSize="@dimen/text_very_large_size"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_profile_menu" />
+
+            <TextView
+                android:id="@+id/rv_friends_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:fontFamily="@font/captura_regular"
+                android:text="@string/profile_friends_amount"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_standard_size"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_friends" />
+
+            <TextView
+                android:id="@+id/tv_show_all_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_standard_size"
+                android:fontFamily="@font/captura_regular"
+                android:text="@string/profile_friends_show_all"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_very_large_size"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_profile_menu" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_friends_list"
+                app:spanCount="3"
+
+                tools:itemCount="6"
+                tools:listitem="@layout/item_friends" />
+
+            <View
+                android:id="@+id/cosmetic_line_friends"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="@dimen/margin_standard_size_2times"
+                android:layout_marginBottom="@dimen/margin_standard_size"
+                android:background="@android:color/darker_gray"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_friends" />
+
+            <TextView
+                android:id="@+id/tv_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:layout_marginTop="@dimen/margin_standard_size"
+                android:fontFamily="@font/captura_regular"
+                android:text="@string/post_posts"
+                android:textColor="@color/colorSecondaryDark"
+                android:textSize="@dimen/text_very_large_size"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cosmetic_line_friends" />
+
+            <LinearLayout
+                android:id="@+id/ll_post_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+                android:padding="@dimen/padding_standard_size"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_post">
+
+                <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+                    android:id="@+id/bt_profile"
+                    android:layout_width="@dimen/toolbar_very_small_size"
+                    android:layout_height="@dimen/toolbar_very_small_size"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/padding_standard_size"
+                    android:src="@drawable/test_photo"
+
+                    app:civ_border_color="@color/colorSecondaryDark"
+                    app:civ_border_width="1dp" />
+
+                <Button
+                    android:id="@+id/bt_create_post"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_button_standard_size"
+                    android:layout_marginStart="@dimen/text_standard_size"
+                    android:layout_marginEnd="@dimen/margin_standard_size"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_user_background"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="@dimen/padding_et_size"
+                    android:text="@string/post_create"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text_standard_size"
+
+                    tools:ignore="RtlSymmetry" />
+
+                <Button
+                    android:id="@+id/bt_add_photo"
+                    android:layout_width="@dimen/icon_very_small_size"
+                    android:layout_height="@dimen/icon_very_small_size"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_standard_size"
+                    android:background="@drawable/ic_import_file"
+                    android:backgroundTint="@color/colorSecondaryDark" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/cosmetic_line_posts"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="@dimen/margin_standard_size"
+                android:background="@android:color/darker_gray"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_post_create" />
+
+            <TextView
+                android:id="@+id/tv_post_feed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:layout_marginTop="@dimen/margin_standard_size"
+                android:layout_marginBottom="@dimen/margin_standard_size_2times"
+                android:fontFamily="@font/captura_regular"
+                android:text="@string/post_empty"
+                android:textColor="@android:color/black"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cosmetic_line_posts" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_profile_post_feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_standard_size"
+                android:background="@color/colorBackground"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cosmetic_line_posts"
+
+                tools:listitem="@layout/item_post" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

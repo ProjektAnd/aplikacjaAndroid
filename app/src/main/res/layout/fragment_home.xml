@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="false"
+    android:orientation="vertical"
+
+    tools:context="net.mankindenemy.diploma.projektProgramowanieAndroid.ui.fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_post_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_standard_size">
+
+            <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+                android:id="@+id/bt_profile"
+                android:layout_width="@dimen/icon_small_size"
+                android:layout_height="@dimen/icon_small_size"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:src="@drawable/test_photo" />
+
+            <Button
+                android:id="@+id/bt_create_post"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/toolbar_very_small_size"
+                android:layout_marginStart="@dimen/margin_standard_size"
+                android:layout_marginEnd="@dimen/margin_standard_size"
+                android:layout_weight="1"
+                android:background="@drawable/search_user_background"
+                android:gravity="start|center_vertical"
+                android:paddingStart="@dimen/padding_et_size"
+                android:text="@string/post_create"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_chat_size"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewLine0"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorSecondaryDark" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small_size"
+            android:orientation="horizontal"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            tools:listitem="@layout/item_story" />
+
+        <View
+            android:id="@+id/cosmetic_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorSecondaryDark" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            tools:listitem="@layout/item_post" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

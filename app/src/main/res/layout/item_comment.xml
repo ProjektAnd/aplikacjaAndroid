@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground">
+
+    <net.mankindenemy.diploma.projektProgramowanieAndroid.ui.image.RoundedImageView
+        android:id="@+id/iv_comment"
+        android:layout_width="@dimen/icon_user_small_size"
+        android:layout_height="@dimen/icon_user_small_size"
+        android:layout_marginStart="@dimen/margin_standard_size"
+        android:layout_marginTop="@dimen/margin_small_size_1t5times"
+        android:src="@drawable/test_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_comment_window"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_comment_size"
+        android:layout_marginTop="@dimen/margin_small_size_1t5times"
+        android:layout_marginEnd="@dimen/margin_standard_size"
+        app:cardBackgroundColor="@color/colorSecondary"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_comment"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_small_size"
+            android:layout_marginEnd="@dimen/margin_standard_size"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_post_owner_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small_size"
+                android:layout_marginTop="@dimen/margin_tiny_size"
+                android:maxLines="1"
+                android:text="@string/profile_user_name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_chat_user_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small_size"
+                android:text="@string/comment_text"
+                android:textColor="@color/colorTextChat"
+                android:textSize="@dimen/text_chat_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tv_comment_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard_size_2times"
+        android:layout_marginTop="@dimen/margin_tiny_size"
+        android:fontFamily="@font/captura_black"
+        android:text="@string/comment_reply"
+        android:textColor="@color/colorSecondaryDark"
+
+        app:layout_constraintStart_toEndOf="@id/iv_comment"
+        app:layout_constraintTop_toBottomOf="@id/cv_comment_window" />
+
+
+    <TextView
+        android:id="@+id/tv_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard_size"
+        android:layout_marginTop="@dimen/margin_tiny_size"
+        android:fontFamily="@font/captura_black"
+        android:text="@string/comment_like"
+        android:textColor="@color/colorSecondaryDark"
+        app:layout_constraintStart_toEndOf="@id/tv_comment_reply"
+        app:layout_constraintTop_toBottomOf="@id/cv_comment_window" />
+
+    <TextView
+        android:id="@+id/tv_post_creation_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standard_size"
+        android:layout_marginTop="@dimen/margin_tiny_size"
+        android:fontFamily="@font/captura_black"
+        android:text="@string/time_example"
+        android:textColor="@color/colorSecondaryDark"
+
+        app:layout_constraintStart_toEndOf="@id/tv_favourite"
+        app:layout_constraintTop_toBottomOf="@id/cv_comment_window" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+
+    tools:context="net.mankindenemy.diploma.project.net.mankindenemy.diploma.projektProgramowanieAndroid.ui.activity.SearchActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_friends"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_standard_size"
+        android:layout_margin="@dimen/margin_standard_size"
+        android:background="@drawable/search_user_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_standard_size"
+        android:fontFamily="@font/captura_regular"
+        android:text="@string/search_users_header"
+        android:textColor="@color/colorSecondaryDark"
+        android:textSize="@dimen/text_very_large_size"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:listitem="@layout/item_user" />
+
+</LinearLayout>
